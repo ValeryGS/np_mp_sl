@@ -1,0 +1,8 @@
+name = input('Введите Ваше имя: ')
+age = int(input(f"Здравстсвуйте {name}, сколько Вам лет? "))
+version_Python = float(input(f'{age} - прекрасный возраст {name}! Какую версию Python вы используете? '))
+true_false = bool(input(f'{name}, Вы уверены что версия {version_Python} записана верно? (true/false)'))
+print(name, type(name))
+print(age, type(age))
+print(version_Python, type(version_Python))
+print(true_false, type(true_false))
