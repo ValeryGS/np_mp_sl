@@ -7,7 +7,7 @@ while num != 0:
     if temp > res_n:
         res_n = temp
         place_n = count
-    num = num //10
+    num = num // 10
     count += 1
 print(f'Это {count - place_n}-я цифра вчисле = {res_n}')
 
