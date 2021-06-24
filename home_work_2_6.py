@@ -12,22 +12,15 @@ for k,v in catalog:
         pass
         #inp = input(f"Введите {key} товара: ")
         #v[key] = inp
-stat =  dict.fromkeys(v.keys(),[])
+stat =  dict.fromkeys(v.keys(),[0])
 for k,v in catalog:
-    for k in v:
-        print(k,v[k])
-        stat[k].append(v[k])
+    for k_ in v:
         print(stat)
+        print(k_,v[k_])
+        stat[k_].append(v[k_])
+        print(stat)
+        inp = input() # Это просто для останова
     print("--")
 
 
 
-'''
-        for x, y in val:
-            print(x, y)
-
-        val[x] = inp
-
-
-inp = input("Введите { } товара: ")
-'''
