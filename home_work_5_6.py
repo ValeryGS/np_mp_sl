@@ -23,7 +23,7 @@ line = io_file('text_6.txt','','r')
 dict_res = {}
 # И тут начинается огород ....
 for el in line:
-    for s in el.rsplit(':'):
+    for s in el.split(':'):
         if s.isalpha():
             key = s
             dict_res[key] = 0
@@ -34,6 +34,5 @@ for el in line:
                     if l.isdigit():
                         hours += l
                 if hours.isdigit():
-                    print(hours)
                     dict_res[key] += int(hours)
 print(dict_res)
