@@ -24,8 +24,6 @@ def io_file(file, text, mode):
             f.writelines(text)
         elif mode == 'r':
             return f.readlines()
-        elif mode == 'js':
-            json.dump(text, f)
 
 lines = io_file('text_7.txt','','r')
 d_all = {}
