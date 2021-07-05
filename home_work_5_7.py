@@ -36,6 +36,6 @@ for el in lines:
 d_aver["average_profit"] /=len(d_all)
 res_lst = [d_all,d_aver]
 print(res_lst)
-with open('text_7_1.json','w') as f_j:
+with open('text_7_1.json','w', encoding='utf-8') as f_j:
     json.dump(res_lst, f_j, indent=2, ensure_ascii=False)
 # ensure_ascii  не захотел красоту наводитьб, честно времени нет искать
