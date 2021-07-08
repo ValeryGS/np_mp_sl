@@ -50,7 +50,9 @@ class TownCar(LimSpeedCar):
     pass
 
 class WorkCar(LimSpeedCar):
-    pass
+    def __init__(self, speed, color, name, is_police = False):
+        super().__init__(speed, color, name, is_police = False)
+        self.speed_allowed = 40
 
 class SportCar(Car):
     pass
@@ -65,12 +67,6 @@ vaz.turn()
 vaz.show_speed()
 vaz.stop()
 print()
-maz = WorkCar(59, 'dirty', 'MAZ - 500', False)
-maz.go()
-maz.turn()
-maz.show_speed()
-maz.stop()
-print()
 mos = PoiceCar(200,'white','Moskvich-401', True)
 mos.go()
 mos.turn()
@@ -82,3 +78,9 @@ am.go()
 am.turn()
 am.show_speed()
 am.stop()
+print()
+maz = WorkCar(59, 'dirty', 'MAZ - 500', False)
+maz.go()
+maz.turn()
+maz.show_speed()
+maz.stop()
