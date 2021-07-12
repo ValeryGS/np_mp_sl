@@ -9,10 +9,6 @@ class Cell:
 
     def __str__(self):
         return f'{self.cell}'
-        pass
-
-    def make_order(self, raw):
-        pass
 
     def __sub__(self, other):
         return (Cell(self.cell - other.cell) if self.cell > other.cell else Cell(other.cell - self.cell))
