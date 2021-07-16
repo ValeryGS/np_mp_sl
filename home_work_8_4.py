@@ -22,4 +22,9 @@ class Notebook(Equipment):
 class Scanner(Equipment):
     pass
 
-p = Printer('ctx','x-111', 123,)
+stop = True
+while stop:
+    print(f'\033[44m\033[37m\033[1m Учет товарно-материальных ценностей{" " * 54}\033[0m')
+    print(f' ')
+
+    n = input()
