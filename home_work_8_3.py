@@ -13,7 +13,7 @@ while not stop:
             stop = True
             print(f'Final list:\n ')
             print(*res_lst,sep = ',')
-            print('The program is completed by the user.')
+            print('The program is stopped by the user.')
 
         elif num.isdigit():
             res_lst.append(num)

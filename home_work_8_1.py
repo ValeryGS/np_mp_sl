@@ -8,6 +8,8 @@
 реальных данных.
 
 '''
+
+
 class Date:
     def __init__(self, d, m, y):
         self.day = d
@@ -27,7 +29,7 @@ class Date:
 
     @staticmethod
     def validate(val):
-        def check(x,y,obj,num):
+        def check(x, y, obj, num):
             if x <= num <= y:
                 print(f'The number of the {obj} is entered correctly.')
             else:
@@ -37,12 +39,6 @@ class Date:
         check(1753, 2021, 'year', val.year)
 
 
-        pass
 date = '32-07-2021'
 my_date = Date.str2num(date)
 Date.validate(my_date)
-
-'''
-
-
-'''

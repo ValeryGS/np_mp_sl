@@ -2,8 +2,6 @@ class MyEx(Exception):
     def __init__(self,text = f'\033[31m\033[1mDivision by zero is not possible.\033[0m'):
         self.text = text
         print(text)
-        pass
-
 
 
 try:
