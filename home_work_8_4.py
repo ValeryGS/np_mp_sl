@@ -52,7 +52,7 @@ n2 = Notebook('acer','5210',1, 'notebook')
 s1 = Scaner('hp','laserJ', 2, 'scaner')
 p1 = Printer('canon','x23', 1, 'printer')
 p2 = Printer('hp','gigo', 2, 'printer') #('ctx','c-11', 2)
-s1 = Scaner('hp','laserJ', 2, 'scaner')
+s1 = Scaner('sony','ninga', 2, 'scaner')
 
 df = pd.DataFrame(store)
 print(df.head())
