@@ -15,38 +15,39 @@ class Storage:
 
 class Equipment:
 
-    def __init__(self, brand, model, price, quantity):
-        # self.brand = brand
-        # self.model = model
-        # self.price = price
-        # self.quantity = quantity
+    def __init__(self, brand, model, quantity, cat):
         self.t = {}
         self.t['brand'] = brand
-        self.t['mobel'] = model
-        self.t['price'] = price
+        self.t['model'] = model
         self.t['quantity'] = quantity
-
-    pass
+        self.cat = cat
+        if self.cat in store.keys():
+            if store[self.cat]['brand'] == brand and store[self.cat]['model'] == model:
+                store[self.cat]['quantity'] += quantity
+                print(store[self.cat]['quantity'])
+            else:
+                store[self.cat] = self.t
+        else:
+            store[self.cat] = self.t
 class Printer(Equipment):
-    def __init__(self, brand, model, price, quantity):
-        super().__init__(brand, model, price, quantity)
+    def __init__(self, brand, model, quantity, cat):
+        super().__init__(brand, model, quantity, cat)
 
-        store['printers'] = self.t
 class Notebook(Equipment):
-    def __init__(self, brand, model, price, quantity):
-        super().__init__(brand, model, price, quantity)
+    def __init__(self, brand, model, quantity, cat):
+        super().__init__(brand, model, quantity, cat)
+        #store['notebook'] = self.t
 
-        store['notebooks'] = self.t
 class Scaner(Equipment):
-    def __init__(self, brand, model, price, quantity):
-        super().__init__(brand, model, price, quantity)
+    def __init__(self, brand, model, quantity, cat):
+        super().__init__(brand, model, quantity, cat)
+        #store['scaner'] = self.t
 
-        store['scaners'] = self.t
-    pass
-p1 = Printer('cfnon','x23', 2300, 1)
-#p2 = Printer('ctx','c-11', 1300, 2)
-n1 = Notebook('acer','5210',2100,1)
-s1 = Scaner('hp','laserJet', 2200, 2)
+p1 = Printer('cfnon','x23', 1, 'printer')
+p2 = Printer('cfnon','x23', 2, 'printer') #('ctx','c-11', 2)
+n1 = Notebook('acer','5210',1, 'notebook')
+n2 = Notebook('acer','5210',1, 'notebook')
+s1 = Scaner('hp','laserJet', 2, 'scaner')
 
 df = pd.DataFrame(store)
 print(df.head())
