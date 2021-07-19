@@ -3,28 +3,50 @@
         --------------<< under construction >>--------------
 '''
 from abc import ABC, abstractmethod
+import pandas as pd
+
+printers = {}
+notebooks = {}
+store = {}
 
 class Storage:
-    pass
+    def __init__(self):
+        pass
 
-class Equipment(ABC):
-    def __init__(self, brand, model, price, quantity=1):
-        self.brand = brand
-        self.model = model
-        self.price = price
-        print(self.brand)
+class Equipment:
+
+    def __init__(self, brand, model, price, quantity):
+        # self.brand = brand
+        # self.model = model
+        # self.price = price
+        # self.quantity = quantity
+        self.t = {}
+        self.t['brand'] = brand
+        self.t['mobel'] = model
+        self.t['price'] = price
+        self.t['quantity'] = quantity
+
     pass
 class Printer(Equipment):
-    pass
+    def __init__(self, brand, model, price, quantity):
+        super().__init__(brand, model, price, quantity)
+
+        store['printers'] = self.t
 class Notebook(Equipment):
-    pass
+    def __init__(self, brand, model, price, quantity):
+        super().__init__(brand, model, price, quantity)
 
-class Scanner(Equipment):
-    pass
+        store['notebooks'] = self.t
+class Scaner(Equipment):
+    def __init__(self, brand, model, price, quantity):
+        super().__init__(brand, model, price, quantity)
 
-stop = True
-while stop:
-    print(f'\033[44m\033[37m\033[1m Учет товарно-материальных ценностей{" " * 54}\033[0m')
-    print(f'\033[4mнаименование    |{" "*23}количество в подразделениях{" "*23}')
-    print(f'{" "*16}|{" "*8}цех № 1{" "*8}|')
-    n = input()
+        store['scaners'] = self.t
+    pass
+p1 = Printer('cfnon','x23', 2300, 1)
+#p2 = Printer('ctx','c-11', 1300, 2)
+n1 = Notebook('acer','5210',2100,1)
+s1 = Scaner('hp','laserJet', 2200, 2)
+
+df = pd.DataFrame(store)
+print(df.head())
