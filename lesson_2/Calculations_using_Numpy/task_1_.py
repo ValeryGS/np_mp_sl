@@ -13,8 +13,13 @@ a = np.array([[1, 6],
               [3, 11],
               [3, 10],
               [1, 7]])
-
 mean_a = a.mean(axis=0)
 
-print(f'Средние значения столбцов: {mean_a}')
 
+def foo():
+    mean_a = (np.array([[1, 6], [2, 8], [3, 11], [3, 10], [1, 7]])).mean(axis=0)
+    print(f'Средние значения столбцов: {mean_a}')
+
+
+if __name__ == '__main__':
+    foo()

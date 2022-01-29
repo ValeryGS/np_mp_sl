@@ -5,7 +5,14 @@
 
 """
 import numpy as np
+from task_1_ import a, mean_a
 
-print('Result array:')
-print(a_centered := np.subtract(a := np.array([[1, 6], [2, 8], [3, 11], [3, 10], [1, 7]]), (mean_a := a.mean(axis=0))))
-print('\n','Array "a":\n', a, '\n' * 2,'Array "mean_a":\n',  mean_a)
+
+def foo():
+    print('Result array:')
+    print(a_centered := np.subtract(a, (mean_a := a.mean(axis=0))))
+    print('\n', 'Array "a":\n', a, '\n' * 2, 'Array "mean_a":\n', mean_a)
+
+
+if __name__ == '__main__':
+    foo()
