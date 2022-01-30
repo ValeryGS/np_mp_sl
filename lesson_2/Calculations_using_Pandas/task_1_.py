@@ -10,7 +10,7 @@
 
 import pandas as pd
 
-authors, book = pd.DataFrame({'author_id': [1, 2, 3], 'author_name': ['Еургенев', 'Чехов', 'Островский']},
+authors, book = pd.DataFrame({'author_id': [1, 2, 3], 'author_name': ['Тургенев', 'Чехов', 'Островский']},
                              columns=['author_id', 'author_name']), \
                 pd.DataFrame({'author_id': [1, 1, 1, 2, 2, 3, 3],
                               'book_title': ['Отцы и дети', 'Рудин', 'Дворянское гнездо', 'Толстый и тонкий',
