@@ -3,3 +3,4 @@ recurse.py
 i.py
 README.md
 venv/
+__pycache__/
